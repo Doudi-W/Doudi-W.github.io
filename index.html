@@ -98,6 +98,7 @@
             border-radius: 10px;
             transition: all 0.3s ease;
             font-size: 16px;
+            cursor: pointer;
         }
 
         .link-btn:hover {
@@ -151,7 +152,8 @@
             <a href="https://github.com/Doudi-W" class="link-btn" target="_blank">
                 <i class="fa fa-github"></i> GitHub
             </a>
-            <a href="https://mail.qq.com/" class="link-btn" target="_blank">
+            <!-- 点击复制邮箱按钮（文字显示"邮箱"，地址隐藏） -->
+            <a href="javascript:void(0)" class="link-btn" onclick="copyEmail()">
                 <i class="fa fa-envelope"></i> 邮箱
             </a>
             <a href="#" class="link-btn">
@@ -164,5 +166,13 @@
             © 2026 Doudi-W | Powered by GitHub Pages
         </div>
     </div>
+
+    <!-- 邮箱复制功能脚本（地址写在这里，页面上看不到） -->
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("2813809717@qq.com");
+            alert("邮箱已复制到剪贴板！");
+        }
+    </script>
 </body>
 </html>
