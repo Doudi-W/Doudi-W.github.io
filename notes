@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习笔记 | Doudi-W</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .note-item {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .note-item:hover {
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+        .note-title {
+            color: #2d3748;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .note-date {
+            color: #718096;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <i class="fa fa-arrow-left"></i> 返回首页
+        </a>
+        <h1>我的学习笔记</h1>
+        
+        <div class="note-item">
+            <a href="#" class="note-title">计算机网络：应用服务器搭建实验报告</a>
+            <p class="note-date">2026-05-13</p>
+        </div>
+        
+        <div class="note-item">
+            <a href="#" class="note-title">C++：算法入门笔记</a>
+            <p class="note-date">2026-05-10</p>
+        </div>
+        
+        <div class="note-item">
+            <a href="#" class="note-title">Linux：常用命令总结</a>
+            <p class="note-date">2026-05-05</p>
+        </div>
+    </div>
+</body>
+</html>
