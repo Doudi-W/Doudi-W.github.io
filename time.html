@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时服务器时间</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .time-box {
+            background: white;
+            padding: 50px 80px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        #server-time {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-box">
+        <h2>服务器实时时间</h2>
+        <div id="server-time">加载中...</div>
+    </div>
+
+    <script>
+        // 定义一个函数，从服务器获取时间并更新页面
+        function updateTime() {
+            fetch("http://localhost:8080/api/time")
+                .then(response => response.text())
+                .then(time => {
+                    // 把获取到的时间显示在页面上
+                    document.getElementById("server-time").textContent = time;
+                });
+        }
+
+        // 页面加载时先获取一次时间
+        updateTime();
+
+        // 每隔1000毫秒（1秒）自动调用一次updateTime函数
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
